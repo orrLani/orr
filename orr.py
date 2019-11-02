@@ -1,0 +1,2 @@
+print("yes")
+print("no")
