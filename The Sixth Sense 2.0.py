@@ -1,5 +1,4 @@
 #from RtpPacket import RtpPacket
-
 from tkinter import *
 import tkinter.messagebox
 import socket
