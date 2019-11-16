@@ -1,0 +1,19 @@
+
+import socket
+
+IP="192.168.100.1"
+tcp_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+tcp_socket.connect((IP, 8888))
+tcp_socket.send("CMD_RTSP_TRANS_START".encode())
+
+print("sent,DFFG enjoy")
+
+import cv2
+vcap =cv2.VideoCapture("rtsp://192.168.100.1/stream0")
+
+
+while True:
+    ret, frame = vcap.read()
+    print("I have a new frame ", ret)
+    cv2.imshow('VIDEO', frame)
+    cv2.waitKey(1)
